@@ -3,12 +3,12 @@ frontend:
   phases:
     preBuild:
       commands:
+        - echo "REACT_APP_VAR_NAME=$REACT_APP_VAR_NAME_CONSOLE" > .env
         - npm ci
     build:
       commands:
         - npm run build
-        - pwd
-        - echo "REACT_APP_VAR_NAME=$REACT_APP_VAR_NAME_CONSOLE" > .env
+
   artifacts:
     baseDirectory: build
     files:
