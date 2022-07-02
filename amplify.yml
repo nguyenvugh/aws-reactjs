@@ -8,7 +8,7 @@ frontend:
       commands:
         - npm run build
         - pwd
-        - echo "REACT_APP_VAR_NAME=$REACT_APP_VAR_NAME_CONSOLE" >> .env
+        - echo "REACT_APP_VAR_NAME=$REACT_APP_VAR_NAME_CONSOLE" > .env
   artifacts:
     baseDirectory: build
     files:
